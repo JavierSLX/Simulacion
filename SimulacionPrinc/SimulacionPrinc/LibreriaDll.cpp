@@ -10,12 +10,10 @@ int LibreriaDll::Login::accederUsuario(wstring nick, wstring pwd)
 	try
 	{
 		conn.OpenSession(hWnd, CONNECTION_STRING);
-		Sys::Format(consulta, L"SELECT p.id\
-			FROM permiso p, usuario u, acceso a\
-			WHERE p.usuario_id = u.id\
-			AND p.acceso_id = a.id\
-			AND p.nick = '%s'\
-			AND p.pwd = '%s'",nick.c_str(),pwd.c_str());
+		Sys::Format(consulta, L" SELECT p.usuario_id\
+			FROM permiso p\
+			WHERE p.nick = '%s'\
+			AND p.pwd = '%s' ", nick.c_str(), pwd.c_str());
 		resultadoConsulta = conn.GetInt(consulta);
 	}
 	catch (Sql::SqlException e)

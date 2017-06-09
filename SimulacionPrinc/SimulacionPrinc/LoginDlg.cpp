@@ -11,9 +11,11 @@ void LoginDlg::btAceptar_Click(Win::Event& e)
 {
 
 	LibreriaDll::Login libreriaObj;
-	int idUsuario;
-	idUsuario = libreriaObj.accederUsuario(tbxNick.Text, tbxPwd.Text);
-	if (idUsuario > 0)
+	int resultadoConsulta;
+	wstring Nick = tbxNick.Text;
+	wstring Pwd = tbxPwd.Text;
+	resultadoConsulta = libreriaObj.accederUsuario(Nick,Pwd);
+	if (resultadoConsulta > 0)
 	{
 		if (MessageBoxW(L"Bienvenido", L"Registro exitoso", MB_OK | MB_ICONINFORMATION) == IDYES)
 		{
