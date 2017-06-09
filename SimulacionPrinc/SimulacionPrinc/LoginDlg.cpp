@@ -12,7 +12,27 @@ void LoginDlg::btAceptar_Click(Win::Event& e)
 
 	LibreriaDll::Login libreriaObj;
 	int idUsuario;
-	idUsuario = libreriaObj.
+	idUsuario = libreriaObj.accederUsuario(tbxNick.Text, tbxPwd.Text);
+	if (idUsuario > 0)
+	{
+		if (MessageBoxW(L"Bienvenido", L"Registro exitoso", MB_OK | MB_ICONINFORMATION) == IDYES)
+		{
+
+		}
+		tbxNick.SetText(L"");
+		tbxPwd.SetText(L"");
+		tbxNick.SetFocus();
+	}
+	else
+	{
+		if (MessageBoxW(L"Este usuario no existe", L"Error", MB_OK | MB_ICONERROR) == IDYES)
+		{
+
+		}
+		tbxNick.SetText(L"");
+		tbxPwd.SetText(L"");
+		tbxNick.SetFocus();
+	}
 
 }
 
