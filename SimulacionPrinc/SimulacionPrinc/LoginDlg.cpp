@@ -17,7 +17,7 @@ void LoginDlg::btAceptar_Click(Win::Event& e)
 	resultadoConsulta = libreriaObj.accederUsuario(Nick,Pwd);
 	if (resultadoConsulta > 0)
 	{
-		if (MessageBoxW(L"Bienvenido", L"Registro exitoso", MB_OK | MB_ICONINFORMATION) == IDYES)
+		if (MessageBoxW(L"Bienvenido  "+ Nick, L"Registro exitoso", MB_OK | MB_ICONINFORMATION) == IDYES)
 		{
 
 		}
