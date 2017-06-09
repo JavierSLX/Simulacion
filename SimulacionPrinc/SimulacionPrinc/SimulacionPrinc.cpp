@@ -36,6 +36,8 @@ void SimulacionPrinc::Cmd_Usuario(Win::Event& e)
 //Ventana modificación de usuario
 void SimulacionPrinc::Cmd_Modificar(Win::Event& e)
 {
+	ModificarDlg actualiacionObj;
+	actualiacionObj.BeginDialog(hWnd);
 }
 
 //Ventana modificacion de permisos

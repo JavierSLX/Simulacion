@@ -40,6 +40,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LoginDlg.h">
+    <ClInclude Include="ModificarDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -63,6 +64,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LoginDlg.cpp">
+    <ClCompile Include="ModificarDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
