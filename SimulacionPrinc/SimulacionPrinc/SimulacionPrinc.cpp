@@ -39,4 +39,15 @@ void SimulacionPrinc::Cmd_Modificar(Win::Event& e)
 void SimulacionPrinc::Cmd_Permiso(Win::Event& e)
 {
 }
+// Ventana de eliminar  usuarios
+void SimulacionPrinc::Cmd_Eliminar(Win::Event& e)
+{
+	EliminarDlg EliminarObj;
+	EliminarObj.BeginDialog(hWnd);
+
+}
+
+void SimulacionPrinc::Cmd_Recuperar(Win::Event& e)
+{
+}
 

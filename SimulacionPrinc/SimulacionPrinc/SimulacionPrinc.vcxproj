@@ -160,6 +160,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EliminarDlg.h" />
     <ClInclude Include="LibreriaDll.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="AboutDlg.h" />
@@ -171,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="EliminarDlg.cpp" />
     <ClCompile Include="LibreriaDll.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

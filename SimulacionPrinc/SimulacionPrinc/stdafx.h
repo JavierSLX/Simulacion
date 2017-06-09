@@ -44,4 +44,4 @@ using namespace std;
 #define DSN L"dsn_MyDatabase"
 #define USERNAME L"root"
 #define PASSWORD L"123"
-#define CONNECTION_STRING L"DRIVER={SQL Server};server=MyComputer\\SQLEXPRESS;database=MyDabatase;Trusted_Connection=yes"
+#define CONNECTION_STRING L"Driver={MySQL ODBC 5.3 UNICODE Driver};Server=localhost;Database=marquesada;Port=3300;User=root;Password=root;Option=1;"
