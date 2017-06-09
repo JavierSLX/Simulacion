@@ -13,9 +13,10 @@ void ModificarDlg::btActualizar_Click(Win::Event& e)
 	int activo = tbxActivo.IntValue;
 	wstring puestoEmpleado;
 	wstring categoriaEmpleado;
-	int puesto=consulta.consultarPuestoIdNuevo(tbxPuesto.Text);
+	int puestoId=consulta.consultarPuestoIdNuevo(tbxPuesto.Text);
 	int categoriaId = consulta.consultarCategoriaIdNueva(tbxCategoria.Text);
-
+	consulta.actualizarInformacion(tbxId.IntValue, nombreEmpleado, activo, puestoId, categoriaId);
+	this->MessageBoxW(L"Usuario Actualizado", L"Informacion", MB_OK);
 }
 
 void ModificarDlg::btConsultar_Click(Win::Event& e)

@@ -147,5 +147,23 @@ int LibreriaDll::Actualizacion::consultarPuestoIdNuevo(wstring puestoDescripcion
 }
 void LibreriaDll::Actualizacion::actualizarInformacion(int id, wstring nombre, int activo, int puesto_id, int categoria_id)
 {
-
+	Sql::SqlConnection conn;
+	wstring consulta;
+	try
+	{
+		conn.OpenSession(hWnd, CONNECTION_STRING);
+		Sys::Format(consulta, L"UPDATE usuario SET nombre='%s'",nombre.c_str()," WHERE id=%d",id);
+		conn.ExecuteNonQuery(consulta);
+		Sys::Format(consulta, L"UPDATE usuario SET activo='%d'", activo, " WHERE id=%d", id);
+		conn.ExecuteNonQuery(consulta);
+		Sys::Format(consulta, L"UPDATE usuario SET puesto_id='%d'", puesto_id, " WHERE id=%d", id);
+		conn.ExecuteNonQuery(consulta);
+		Sys::Format(consulta, L"UPDATE usuario SET categoria_id='%d'", categoria_id, " WHERE id=%d", id);
+		conn.ExecuteNonQuery(consulta);
+	}
+	catch (Sql::SqlException e)
+	{
+		this->MessageBox(e.GetDescription(), L"Error", MB_OK | MB_ICONERROR);
+	}
+	conn.CloseSession();
 }
