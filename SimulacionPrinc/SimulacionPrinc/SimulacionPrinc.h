@@ -1,9 +1,10 @@
-#pragma once  //______________________________________ SimulacionPrinc.h  
+#pragma once  //______________________________________ SimulacionPrinc.h
 #include "Resource.h"
 #include "LoginDlg.h"
 #include "ModificarDlg.h"
 #include "PermisoDlg.h"
-
+#include "EliminarDlg.h"
+#include "RecuperarUsuarioDlg.h"
 class SimulacionPrinc: public Win::Window
 {
 public:
@@ -34,6 +35,8 @@ protected:
 	void Cmd_Usuario(Win::Event& e);
 	void Cmd_Modificar(Win::Event& e);
 	void Cmd_Permiso(Win::Event& e);
+	void Cmd_Eliminar(Win::Event& e);
+	void Cmd_Recuperar(Win::Event& e);
 	//_________________________________________________
 	bool EventHandler(Win::Event& e)
 	{
@@ -42,6 +45,8 @@ protected:
 		if (this->IsEvent(e, IDM_USUARIO)) {Cmd_Usuario(e); return true;}
 		if (this->IsEvent(e, IDM_MODIFICAR)) {Cmd_Modificar(e); return true;}
 		if (this->IsEvent(e, IDM_PERMISO)) {Cmd_Permiso(e); return true;}
+		if (this->IsEvent(e, IDM_ELIMINAR)) {Cmd_Eliminar(e); return true;}
+		if (this->IsEvent(e, IDM_RECUPERAR)) {Cmd_Recuperar(e); return true;}
 		return false;
 	}
 };

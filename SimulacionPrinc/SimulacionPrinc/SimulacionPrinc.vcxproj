@@ -160,10 +160,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EliminarDlg.h" />
     <ClInclude Include="LibreriaDll.h" />
     <ClInclude Include="LoginDlg.h" />
     <ClInclude Include="ModificarDlg.h" />
     <ClInclude Include="PermisoDlg.h" />
+    <ClInclude Include="RecuperarUsuarioDlg.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="AboutDlg.h" />
     <ClInclude Include="stdafx.h" />
@@ -174,10 +176,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="EliminarDlg.cpp" />
     <ClCompile Include="LibreriaDll.cpp" />
     <ClCompile Include="LoginDlg.cpp" />
     <ClCompile Include="ModificarDlg.cpp" />
     <ClCompile Include="PermisoDlg.cpp" />
+    <ClCompile Include="RecuperarUsuarioDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

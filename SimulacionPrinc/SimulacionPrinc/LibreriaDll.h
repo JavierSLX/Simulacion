@@ -21,6 +21,21 @@ public:
 		{
 		}
 		int LibreriaDll::Login::accederUsuario(wstring nick, wstring pwd);
+	};
+	class Eliminar : public Win::Dialog
+	{
+	public:
+		Eliminar()
+		{
+
+		}
+		~Eliminar()
+		{
+		}
+
+		void LibreriaDll::Eliminar::llenarUsuariosLV(Win::ListView lvDepartamento, int large);
+		int LibreriaDll::Eliminar::sacarIDOcultoLV(Win::ListView lv2);
+		void LibreriaDll::Eliminar::eliminaUsuario( int id_usuario);
 	private:
 
 	};
@@ -55,7 +70,29 @@ public:
 		void actualizarPermiso(int usuario_id, int acceso_id);
 	};
 
+	class Recuperar : public Win::Dialog
+	{
+	public:
+		Recuperar()
+		{
+
+		}
+		~Recuperar()
+		{
+
+		}
+
+		void LibreriaDll::Recuperar::llenarUsuariosInactivos(Win::ListView lvDepartamento, int large);
+		int LibreriaDll::Recuperar::sacarIDOcultoLV2(Win::ListView lv2);
+		void LibreriaDll::Recuperar::recuperarUsuario(int id_usuario);
+
+	private:
+
+	};
+
+
+
 private:
-	
+
 
 };

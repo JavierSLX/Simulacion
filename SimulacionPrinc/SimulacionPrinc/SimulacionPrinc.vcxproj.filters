@@ -42,6 +42,10 @@
     <ClInclude Include="LoginDlg.h">
     <ClInclude Include="ModificarDlg.h">
     <ClInclude Include="PermisoDlg.h">
+    <ClInclude Include="EliminarDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RecuperarUsuarioDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -67,6 +71,10 @@
     <ClCompile Include="LoginDlg.cpp">
     <ClCompile Include="ModificarDlg.cpp">
     <ClCompile Include="PermisoDlg.cpp">
+    <ClCompile Include="EliminarDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RecuperarUsuarioDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
