@@ -49,5 +49,7 @@ void SimulacionPrinc::Cmd_Eliminar(Win::Event& e)
 
 void SimulacionPrinc::Cmd_Recuperar(Win::Event& e)
 {
+	RecuperarUsuarioDlg recuperarObj;
+	recuperarObj.BeginDialog(hWnd);
 }
 

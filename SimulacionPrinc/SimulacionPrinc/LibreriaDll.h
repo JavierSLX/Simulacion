@@ -30,6 +30,27 @@ public:
 
 	};
 
+	class Recuperar : public Win::Dialog
+	{
+	public:
+		Recuperar()
+		{
+
+		}
+		~Recuperar()
+		{
+
+		}
+
+		void LibreriaDll::Recuperar::llenarUsuariosInactivos(Win::ListView lvDepartamento, int large);
+		int LibreriaDll::Recuperar::sacarIDOcultoLV2(Win::ListView lv2);
+		void LibreriaDll::Recuperar::recuperarUsuario(int id_usuario);
+
+	private:
+
+	};
+
+
 	
 private:
 	
