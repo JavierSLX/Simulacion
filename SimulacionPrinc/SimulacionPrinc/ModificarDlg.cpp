@@ -8,7 +8,14 @@ void ModificarDlg::Window_Open(Win::Event& e)
 
 void ModificarDlg::btActualizar_Click(Win::Event& e)
 {
-	
+	LibreriaDll::Actualizacion consulta;
+	wstring nombreEmpleado = tbxNombre.Text;
+	int activo = tbxActivo.IntValue;
+	wstring puestoEmpleado;
+	wstring categoriaEmpleado;
+	int puesto=consulta.consultarPuestoIdNuevo(tbxPuesto.Text);
+	int categoriaId = consulta.consultarCategoriaIdNueva(tbxCategoria.Text);
+
 }
 
 void ModificarDlg::btConsultar_Click(Win::Event& e)

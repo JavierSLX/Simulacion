@@ -109,4 +109,43 @@ wstring LibreriaDll::Actualizacion::consultarCategoriaDescripcion(int categoriaI
 	conn.CloseSession();
 	return categoriaDescripcion;
 }
+int LibreriaDll::Actualizacion::consultarCategoriaIdNueva(wstring categoriaDescripcion)
+{
+	Sql::SqlConnection conn;
+	wstring consulta;
+	int categoriaId;
+	try
+	{
+		conn.OpenSession(hWnd, CONNECTION_STRING);
+		Sys::Format(consulta, L"SELECT id FROM categoria WHERE descr='%s'", categoriaDescripcion.c_str());
+		categoriaId = conn.GetInt(consulta);
+	}
+	catch (Sql::SqlException e)
+	{
+		this->MessageBox(e.GetDescription(), L"Error", MB_OK | MB_ICONERROR);
+	}
+	conn.CloseSession();
+	return categoriaId;
+}
+int LibreriaDll::Actualizacion::consultarPuestoIdNuevo(wstring puestoDescripcion)
+{
+	Sql::SqlConnection conn;
+	wstring consulta;
+	int puestoId;
+	try
+	{
+		conn.OpenSession(hWnd, CONNECTION_STRING);
+		Sys::Format(consulta, L"SELECT id FROM puesto WHERE tipo='%s'", puestoDescripcion.c_str());
+		puestoId = conn.GetInt(consulta);
+	}
+	catch (Sql::SqlException e)
+	{
+		this->MessageBox(e.GetDescription(), L"Error", MB_OK | MB_ICONERROR);
+	}
+	conn.CloseSession();
+	return puestoId;
+}
+void LibreriaDll::Actualizacion::actualizarInformacion(int id, wstring nombre, int activo, int puesto_id, int categoria_id)
+{
 
+}
