@@ -1,5 +1,6 @@
 #pragma once  //______________________________________ SimulacionPrinc.h  
 #include "Resource.h"
+#include "PermisoDlg.h"
 class SimulacionPrinc: public Win::Window
 {
 public:

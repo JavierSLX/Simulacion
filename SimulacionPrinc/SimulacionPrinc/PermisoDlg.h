@@ -1,5 +1,6 @@
 #pragma once   //_____________________________________________ PermisoDlg.h  
 #include "resource.h"
+#include "LibreriaDll.h"
 
 class PermisoDlg: public Win::Dialog
 {
@@ -11,6 +12,8 @@ public:
 	{
 	}
 private:
+	wstring permisoVP;
+	void llenarInformacionBasica(int usuario_id);
 	//______ Wintempla GUI manager section begin: DO NOT EDIT AFTER THIS LINE
 	Win::DropDownList ddUsuario;
 	Win::Textbox tbxNick;
@@ -29,7 +32,7 @@ protected:
 	void InitializeGui()
 	{
 		ddUsuario.CreateX(NULL, NULL, WS_CHILD | WS_TABSTOP | WS_VISIBLE | WS_VSCROLL | CBS_DROPDOWNLIST | CBS_WINNORMALCASE, 0.18521, 0.21167, 7.88458, 0.60854, hWnd, 1000);
-		tbxNick.CreateX(WS_EX_CLIENTEDGE, NULL, WS_CHILD | WS_TABSTOP | WS_VISIBLE | ES_AUTOHSCROLL | ES_LEFT | ES_WINNORMALCASE, 0.18521, 1.50812, 4.84187, 0.60854, hWnd, 1001);
+		tbxNick.CreateX(WS_EX_CLIENTEDGE, NULL, WS_CHILD | WS_TABSTOP | WS_VISIBLE | ES_AUTOHSCROLL | ES_READONLY | ES_LEFT | ES_WINNORMALCASE, 0.18521, 1.50812, 4.84187, 0.60854, hWnd, 1001);
 		tbxPwd.CreateX(WS_EX_CLIENTEDGE, NULL, WS_CHILD | WS_TABSTOP | WS_VISIBLE | ES_AUTOHSCROLL | ES_PASSWORD | ES_READONLY | ES_LEFT | ES_WINNORMALCASE, 5.50333, 1.50812, 5.34458, 0.60854, hWnd, 1002);
 		ddPermisos.CreateX(NULL, NULL, WS_CHILD | WS_TABSTOP | WS_VISIBLE | WS_VSCROLL | CBS_DROPDOWNLIST | CBS_WINNORMALCASE, 0.18521, 2.83104, 4.94771, 0.60854, hWnd, 1003);
 		btActualizar.CreateX(NULL, L"Actualizar", WS_CHILD | WS_TABSTOP | WS_VISIBLE | BS_PUSHBUTTON | BS_CENTER | BS_VCENTER, 5.74146, 2.83104, 4.44500, 0.68792, hWnd, 1004);
