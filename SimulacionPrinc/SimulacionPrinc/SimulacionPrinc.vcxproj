@@ -163,6 +163,7 @@
     <ClInclude Include="LibreriaDll.h" />
     <ClInclude Include="LoginDlg.h" />
     <ClInclude Include="ModificarDlg.h" />
+    <ClInclude Include="PermisoDlg.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="AboutDlg.h" />
     <ClInclude Include="stdafx.h" />
@@ -176,6 +177,7 @@
     <ClCompile Include="LibreriaDll.cpp" />
     <ClCompile Include="LoginDlg.cpp" />
     <ClCompile Include="ModificarDlg.cpp" />
+    <ClCompile Include="PermisoDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

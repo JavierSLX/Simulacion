@@ -43,5 +43,7 @@ void SimulacionPrinc::Cmd_Modificar(Win::Event& e)
 //Ventana modificacion de permisos
 void SimulacionPrinc::Cmd_Permiso(Win::Event& e)
 {
+	PermisoDlg permisoObj;
+	permisoObj.BeginDialog(hWnd);
 }
 

@@ -45,4 +45,3 @@ using namespace std;
 #define USERNAME L"root"
 #define PASSWORD L"123"
 #define CONNECTION_STRING L"DRIVER={MySQL ODBC 5.3 UNICODE Driver};server=192.168.1.121;Port=3300;database=atc;user=principal;password=marquesada?466;option=1;"
-

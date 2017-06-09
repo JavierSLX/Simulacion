@@ -2,6 +2,8 @@
 #include "Resource.h"
 #include "LoginDlg.h"
 #include "ModificarDlg.h"
+#include "PermisoDlg.h"
+
 class SimulacionPrinc: public Win::Window
 {
 public:
