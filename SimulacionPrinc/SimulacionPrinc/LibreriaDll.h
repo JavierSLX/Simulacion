@@ -10,6 +10,24 @@ public:
 	~LibreriaDll()
 	{
 	}
+
+	class Login :public Win::Dialog
+	{
+	public:
+		Login()
+		{
+		}
+		~Login()
+		{
+		}
+		int LibreriaDll::Login::accederUsuario(wstring nick, wstring pwd);
+	private:
+
+	};
+
+
+
 private:
 	
+
 };

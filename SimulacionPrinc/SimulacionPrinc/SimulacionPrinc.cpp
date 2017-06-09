@@ -23,6 +23,9 @@ void SimulacionPrinc::Cmd_About(Win::Event& e)
 //Ventana Login
 void SimulacionPrinc::Cmd_Login(Win::Event& e)
 {
+	LoginDlg loginObj;
+	loginObj.BeginDialog(hWnd);
+
 }
 
 //Ventana creación de usuario
